@@ -58,7 +58,11 @@ exports.config = {
         browserName: 'Chrome',
         'appium:deviceName': 'Android GoogleAPI Emulator',
         'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        'appium:automationName': 'UiAutomator2',
+        "appPackage": "com.fghilmany.dietmealapp",
+        "appActivity": "com.fghilmany.dietmealapp.ui.main.MainActivity",
+        "appium:noReset" : true,
+        "appium:forceAppLaunch" : true,
     }],
 
     //
