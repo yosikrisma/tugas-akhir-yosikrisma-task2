@@ -59,7 +59,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName            : 'Android',
         'appium:automationName' : 'UiAutomator2',
-        'appium:deviceName'     : 'Pixel 3 XL API 31',
+        'appium:deviceName'     : 'emulator-5554',
         // browserName             : 'Chrome',
         'appium:platformVersion': '12.0',
         "appium:app"            : path.join(process.cwd(),'./test/apk/Diet_meal.apk'),
