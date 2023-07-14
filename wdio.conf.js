@@ -1,3 +1,5 @@
+const path = require('path')
+
 exports.config = {
     //
     // ====================
@@ -54,14 +56,15 @@ exports.config = {
     //
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
+        platformName            : 'Android',
+        'appium:automationName' : 'UiAutomator2',
+        'appium:deviceName'     : 'Android GoogleAPI Emulator',
+        // browserName             : 'Chrome',
         'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2',
-        "appPackage": "com.fghilmany.dietmealapp",
-        "appActivity": "com.fghilmany.dietmealapp.ui.main.MainActivity",
-        "appium:noReset" : true,
+        "appium:app"            : path.join(process.cwd(),'./test/apk/Diet_meal.apk'),
+        "appPackage"            : "com.fghilmany.dietmealapp",
+        "appActivity"           : "com.fghilmany.dietmealapp.ui.main.MainActivity",
+        "appium:noReset"        : true,
         "appium:forceAppLaunch" : true,
     }],
 
